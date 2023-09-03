@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RF Online Calculator</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <script src="calcShuntStub.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+</head>
+
+<body>
+
+    <!-- Header -->
+			<header id="header" class="alt">
+				<h1 id="logo"><a href="index.html">Hamlob</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="current"><a href="about.html">About</a></li>
+						<li class="submenu">
+							<a href="#">Projects</a>
+							<ul>
+								<li class="submenu"><a href="electronics.html">Electronics</a>
+									<ul>
+										<li><a href="#">Synthesiser</a></li>
+										<li><a href="#">Monotron Mod</a></li>
+										<li><a href="RFcalc/StubTuningCalc.html">Stub Tuning Calculator</a></li>
+									</ul>
+								</li>
+								</li>
+								<li><a href="software.html">Software</a>
+									<ul>
+										<li><a href="#">Sleep Detection</a></li>
+									</ul>
+								</li>
+								</li>
+								<li class="submenu"><a href="music.html">Music</a>
+									<ul>
+										<li><a href="#">Album Ebbs & Flows</a></li>
+										<li><a href="#">EP</a></li>
+										<li><a href="#">Collabs</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="#" class="button primary">Sign Up</a></li>
+					</ul>
+				</nav>
+			</header>
+
+    <section id="main">       
+        <h1>Shunt Stub Tuning Calculator</h1>
+            <img src="stubSchem.png">
+            <div>
+                <form id="form1">
+                    <label for="charImp">Z0</label>
+                    <input type="number" id="charImp"><br>
+                    <label for="loadRes">Rload</label>
+                    <input type="number" id="loadRes"><br>
+                    <label for="loadReact">Xload</label>
+                    <input type="number" id="loadReact"><br>
+                    <label for="fullSol"></label>
+                    <select id="fullSol">
+                        <option value="0">Shortest Solution</option>
+                        <option value="1">Full Solution</option>
+                    </select>
+                    <br><br>
+                    <!--<input type="submit" value="Calculate">-->
+                </form>
+                <button onclick="stubTuneMain()">Calculate</button>
+            </div>
+            <h2 id="solutionHeader"></h2>
+            <p id="result"></p>
+        </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <ul class="icons">
+            <li><a href="http://www.instagram.com/hamlob" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="http://www.github.com/hamlob" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
+            <li><a href="#" class="icon brands circle fa-spotify"><span class="label">Spotify</span></a></li>
+        </ul>
+
+        <ul class="copyright">
+            <li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+        </ul>
+
+    </footer>
+</body>
+</html>
