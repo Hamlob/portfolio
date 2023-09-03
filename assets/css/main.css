@@ -83,7 +83,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: linear-gradient(45deg, #0f7c97, #3fb1a3);
+		background: #E8EEF4;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -315,7 +315,7 @@ input, select, textarea {
 	}
 
 	footer.major {
-		padding-top: 3em;
+		padding-top: 0;
 	}
 
 /* Form */
@@ -452,16 +452,16 @@ input, select, textarea {
 			-ms-transition: all 0.2s ease-in-out;
 			transition: all 0.2s ease-in-out;
 			border: 0;
-			border-radius: 100%;
+			border-radius: 20%;
 			display: inline-block;
-			font-size: 1.25em;
-			height: 2.25em;
+			font-size: 2.5em;
+			height: 0;
 			left: 0;
-			line-height: 2.25em;
+			line-height: 1.1em;
 			text-align: center;
 			text-decoration: none;
 			top: 0;
-			width: 2.25em;
+			width: 1.1em;
 		}
 
 			.icon.circle:hover {
@@ -469,60 +469,45 @@ input, select, textarea {
 			}
 
 			.icon.circle.fa-instagram {
-				background: #e31f4d;
+				background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 90%);
 				color: #fff;
-				font-size: 1.5em;
-				width: 1.875em;
-				height: 1.875em;
-				line-height: 1.875em;				
+				height: 1.1em;			
+			}
+
+			.icon.circle.fa-instagram:hover {
+				background: radial-gradient(circle at 30% 107%, #fbf6b7 0%, #f9f3b2 5%, #fe7568 45%, #d13ea2 90%);
 			}
 
 			.icon.circle.fa-spotify {
 				background: #fff;
 				color: #12aa70;
-				font-size: 2.7em;
-				line-height: 2.7em;
-				width: 0;
-				height: 0;
-				top: 0.2em
+
 				
 							
 			}
 
 			.icon.circle.fa-spotify:hover {
-				top: 0.1em;
 				color: #30bb86;
 			}
 
-				.icon.circle.fa-instagram:hover {
-					background: #d73f62;
-				}
+				
 
-			.icon.circle.fa-facebook-f {
-				background: #7490c3;
-				color: #fff;
+			.icon.circle.fa-youtube {
+				color: #e2182d;
+				background: #fff;
 			}
 
-				.icon.circle.fa-facebook-f:hover {
-					background: #829bc9;
-				}
-
-			.icon.circle.fa-google-plus-g {
-				background: #db6b67;
-				color: #fff;
-			}
-
-				.icon.circle.fa-google-plus-g:hover {
-					background: #df7b77;
+				.icon.circle.fa-youtube:hover {
+					color: #e83849;
 				}
 
 			.icon.circle.fa-github {
-				background: #dcad8b;
-				color: #fff;
+				background: #ffffff;
+				color: #000000;
 			}
 
 				.icon.circle.fa-github:hover {
-					background: #e1b89b;
+					color: #2d2c2c;
 				}
 
 			.icon.circle.fa-dribbble {
@@ -755,63 +740,7 @@ input, select, textarea {
 			padding: 0.5em 0;
 		}
 
-/* Wrapper */
 
-	.wrapper {
-		margin-bottom: 5em;
-		padding: 5em;
-	}
-
-		.wrapper.style1 {
-			padding: 0;
-		}
-
-		.wrapper.style2 {
-			background-color: #83d3c9;
-			background-image: url("images/light-bl.svg"), url("images/light-br.svg");
-			background-position: bottom left, bottom right;
-			background-repeat: no-repeat, no-repeat;
-			background-size: 25em, 25em;
-			color: #fff;
-		}
-
-			.wrapper.style2 input[type="button"]:hover,
-			.wrapper.style2 input[type="submit"]:hover,
-			.wrapper.style2 input[type="reset"]:hover,
-			.wrapper.style2 button:hover,
-			.wrapper.style2 .button:hover {
-				background: rgba(255, 255, 255, 0.15) !important;
-			}
-
-			.wrapper.style2 input[type="button"].primary,
-			.wrapper.style2 input[type="submit"].primary,
-			.wrapper.style2 input[type="reset"].primary,
-			.wrapper.style2 button.primary,
-			.wrapper.style2 .button.primary {
-				background: #fff;
-				border-color: #fff;
-				color: #83d3c9 !important;
-			}
-
-				.wrapper.style2 input[type="button"].primary:hover,
-				.wrapper.style2 input[type="submit"].primary:hover,
-				.wrapper.style2 input[type="reset"].primary:hover,
-				.wrapper.style2 button.primary:hover,
-				.wrapper.style2 .button.primary:hover {
-					border-color: inherit !important;
-					color: #fff !important;
-				}
-
-		.wrapper.style3 {
-			background: #fff;
-			color: inherit;
-		}
-
-		.wrapper.style4 {
-			background: #fff;
-			color: inherit;
-			padding: 4em;
-		}
 
 /* Header */
 
@@ -1090,6 +1019,7 @@ input, select, textarea {
 		cursor: default;
 		padding: 6em 0;
 		text-align: center;
+		margin: 0;
 	}
 
 		#banner .inner {
@@ -1141,7 +1071,7 @@ input, select, textarea {
 					text-decoration: none;
 				}
 
-			#banner .inner footer {
+			#banner .inner {
 				margin: 2em 0 0 0;
 			}
 
@@ -1158,18 +1088,6 @@ input, select, textarea {
 		#main > :last-child {
 			margin-bottom: 0;
 		}
-
-		#main .sidebar section {
-			border-top: solid 1px rgba(124, 128, 129, 0.2);
-			margin: 3em 0 0 0;
-			padding: 3em 0 0 0;
-		}
-
-			#main .sidebar section:first-child {
-				border-top: 0;
-				padding-top: 0;
-				margin-top: 0;
-			}
 
 	body.index #main {
 		padding-top: 5em;
@@ -1198,7 +1116,7 @@ input, select, textarea {
 	#footer {
 		background: #E8EEF4;
 		color: #7c8081;
-		padding: 5em 5em 10em 5em;
+		padding-top: 1em;
 		text-align: center;
 	}
 
@@ -1302,7 +1220,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer {
-				padding: 4em;
+				padding-bottom: 1em;
 			}
 
 	}
@@ -1334,9 +1252,6 @@ input, select, textarea {
 				padding-right: 2.5em;
 			}
 
-			footer.major {
-				padding-top: 1.5em;
-			}
 
 		/* Wrapper */
 
@@ -1506,12 +1421,6 @@ input, select, textarea {
 
 			#cta {
 				margin: 0;
-			}
-
-		/* Footer */
-
-			#footer {
-				padding: 4em 1.5em;
 			}
 
 		/* Nav */
@@ -1752,27 +1661,9 @@ input, select, textarea {
 		/* Icon */
 
 			.icon.circle {
-				font-size: 1em;
+				font-size: 1.6em;
 			}
 
-			.icon.circle.fa-instagram {
-				background: #e31f4d;
-				color: #fff;
-				font-size: 1.2em;
-				width: 1.875em;
-				height: 1.875em;
-				line-height: 1.875em;				
-			}
-
-			.icon.circle.fa-spotify {
-				background: #fff;
-				color: #12aa70;
-				font-size: 2.2em;
-				line-height: 2.2em;
-				width: 0;
-				height: 0;
-				top: 0.2em			
-			}
 
 		/* Button */
 
@@ -1885,9 +1776,7 @@ input, select, textarea {
 
 		/* Footer */
 
-			#footer {
-				padding: 3em 1.5em;
-			}
+
 
 				#footer .copyright li {
 					display: block;
@@ -1917,12 +1806,17 @@ input, select, textarea {
 
 /* RF stub tuning */
 
+	body.stub{
+		background: linear-gradient(45deg, #0f7c97, #3fb1a3);
+	}
+
 	img.stub{
 		display: block;
 		width: 80%;
 		height: auto;
 		border-radius: 10px;
 		margin: auto;
+		max-width: 900px;
 	}
 
 	div.stub-form-container, form.stub-form > input, select, label, button{
