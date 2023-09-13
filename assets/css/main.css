@@ -386,7 +386,7 @@ input, select, textarea {
 	}
 
 		.image:before {
-			background: url("images/overlay.png");
+			/* background: url("images/overlay.png"); */
 			content: '';
 			height: 100%;
 			left: 0;
@@ -1850,3 +1850,24 @@ input, select, textarea {
 	form.stub-form > input{
 		background-color: #d7e8ec;
 	}
+
+/* bio */
+
+.about.list{
+	list-style: none;
+}
+
+.about.header{
+	font-size: 1.5em;
+	font-weight: 900;
+	text-align: center;
+}
+
+.about.subheader{
+	font-size: 1em;
+	text-align: left;
+}
+
+.about.sublist{
+	text-align: left;
+}
