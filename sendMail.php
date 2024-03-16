@@ -16,13 +16,21 @@ if(isset($_POST['submit'])){
         'password' => getenv('MAILGUN_SMTP_PASSWORD'),
         'encryption' => 'tls'
     ];
-    
+
+    //check if all fields were filled out
+    if (empty($from) || empty($name) || empty($subject) || empty($message)) {
+        echo "Please fill out all fields";
+    exit;
+    }
+
+    // Send email
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
-    mail($to,$subject,$message,$headers);
-    mail($from,$subject2,$message2,$headers2); // sends a copy of the message to the sender
-    echo "Mail Sent. Thank you " . $name . ", we will contact you shortly.";
-    // You can also use header('Location: thank_you.php'); to redirect to another page.
-    // You cannot use header and echo together. It's one or the other.
+
+    if (mail($to,$subject,$message,$headers) && mail($from,$subject2,$message2,$headers2)) {
+        echo "Email sent successfully!";
+    } else {
+        echo "Email sending failed";
     }
+    
 ?>
