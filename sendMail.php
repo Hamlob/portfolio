@@ -8,6 +8,15 @@ if(isset($_POST['submit'])){
     $message = $name . " wrote the following:" . "\n\n" . $_POST['message'];
     $message2 = "Here is a copy of your message " . $name . "\n\n" . $_POST['message'];
 
+    // Additional headers for sending via Mailgun SMTP
+    $smtp_config = [
+        'host' => 'smtp.mailgun.org',
+        'port' => 587,
+        'username' => getenv('MAILGUN_SMTP_LOGIN'),
+        'password' => getenv('MAILGUN_SMTP_PASSWORD'),
+        'encryption' => 'tls'
+    ];
+    
     $headers = "From:" . $from;
     $headers2 = "From:" . $to;
     mail($to,$subject,$message,$headers);
