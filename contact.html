@@ -67,19 +67,19 @@
 
 							<!-- Content -->
 								<div class="content">
-									<form action="sendMail.php" method="post">
+									<form id="emailForm">
 										<div class="row gtr-50">
 											<div class="col-6 col-12-mobile">
-												<input type="text" name="name" placeholder="Name" />
+												<input type="text" id="name" name="name" placeholder="Name" />
 											</div>
 											<div class="col-6 col-12-mobile">
-												<input type="text" name="email" placeholder="Email" />
+												<input type="text" id="email" name="email" placeholder="Email" />
 											</div>
 											<div class="col-12">
-												<input type="text" name="subject" placeholder="Subject" />
+												<input type="text" id="subject" name="subject" placeholder="Subject" />
 											</div>
 											<div class="col-12">
-												<textarea name="message" placeholder="Message" rows="7"></textarea>
+												<textarea id="message" name="message" placeholder="Message" rows="7"></textarea>
 											</div>
 											<div class="col-12">
 												<ul class="buttons">
@@ -94,6 +94,9 @@
 
 				</article>
 
+			<!-- Place for submit request response -->
+			<div id="response"></div>
+			
 			<!-- Footer --> 
 			<footer id="footer">
 
@@ -112,7 +115,27 @@
 
 		</div>
 
-		<!-- Scripts -->
+		<!-- Scripts --><script>
+			document.getElementById('emailForm').addEventListener('submit', function(event) {
+				event.preventDefault();
+				var formData = new FormData(this);
+			
+				fetch('send_email.php', {
+					method: 'POST',
+					body: formData
+				})
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('response').innerText = data;
+				})
+				.catch(error => {
+			        	console.error('Error:', error);
+				});
+			});
+			</script>
+
+
+		
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.dropotron.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
