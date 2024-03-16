@@ -32,5 +32,5 @@ if(isset($_POST['submit'])){
     } else {
         echo "Email sending failed";
     }
-    
+}   
 ?>
