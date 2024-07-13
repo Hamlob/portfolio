@@ -411,7 +411,8 @@ input, select, textarea {
 
 			.image.featured img {
 				display: block;
-				width: 100%;
+				width: 300;
+				max-width: 100%;
 			}
 
 /* Icon */
