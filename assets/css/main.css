@@ -1871,3 +1871,9 @@ input, select, textarea {
 .about.sublist{
 	text-align: left;
 }
+
+iframe {
+	max-width: 100% !important;
+	width: 560 !important;
+	height: 315 !important;
+}
