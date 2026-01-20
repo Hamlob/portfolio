@@ -406,14 +406,23 @@ input, select, textarea {
 
 		.image.featured {
 			display: block;
-			margin: 0 0 2em 0;
+			margin: 0 auto;
+			text-align: center;
 		}
 
 			.image.featured img {
 				display: block;
-				width: 300;
+				width: 300px;
 				max-width: 100%;
+				margin: 0 auto;
 			}
+	.img_description {
+		font-size: 0.9em;
+		font-style: italic;
+		margin-top: 0.5em;
+		color: #555555;
+		text-align: center;
+	}
 
 /* Icon */
 
@@ -1332,7 +1341,7 @@ input, select, textarea {
 		/* Section/Article */
 
 			section {
-				margin: 1em 0 1em 0;
+				margin: 5em 0 1em 0;
 				
 			}
 
