@@ -28,7 +28,7 @@ const projects = [
     {
         title: 'EHX Pitchfork Eurorack Mod',
         description: 'Modification of the effect that turns it into a eurorack module.',
-        image: '/images/ehx_mod/peachfork.png',
+        image: '/images/ehx_mod/peachfork_modular.png',
         to: '/ehx-pitchfork-mod',
     },
 ]
