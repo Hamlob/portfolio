@@ -1,6 +1,6 @@
 https://hamlob.com/
 https://hamlob.com/#/electronics
-https://hamlob.com/#/stub-tuning-calc
+https://hamlob.com/#/stub-tuning-calculator
 https://hamlob.com/#/software
 https://hamlob.com/#/music
 https://hamlob.com/#/contact
