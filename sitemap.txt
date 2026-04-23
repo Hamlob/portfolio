@@ -1,6 +1,8 @@
-https://hamlob.com/index.html
-https://hamlob.com/electronics.html
+https://hamlob.com/
+https://hamlob.com/#/electronics
+https://hamlob.com/#/stub-tuning-calc
+https://hamlob.com/#/software
+https://hamlob.com/#/music
+https://hamlob.com/#/contact
+https://hamlob.com/#/ehx-pitchfork-mod
 https://hamlob.com/StubTuningCalc.html
-https://hamlob.com/software.html
-https://hamlob.com/music.html
-https://hamlob.com/contact.html
