@@ -194,15 +194,22 @@ const EhxPitchforkMod = () => {
                 </figcaption>
             </figure>
 
+            <figure>
+                <img src="/images/ehx_mod/ehx_guide.png" alt="connection guide on ehx" style={{ width: '100%' }} />
+                <figcaption>
+                    <em>Figure 11: The different signals and connectors on the EHX board.</em>
+                </figcaption>
+            </figure>
+
             <h1>Conclusion</h1>
             <p>
                 This mod provides a way of using EHX Pitchfork effect in a eurorack modular setup. It allows powering of the effect by standard eurorack supply and using eurorack audio levels. Furthermore, the controls of footswitch, expression pedal and direction switch are possible using a control voltages compatible with eurorack standards.
             </p>
 
             <figure>
-                <img src="/images/ehx_mod/side.jpeg" alt="Final module" style={{ width: '100%' }} />
+                <img src="/images/ehx_mod/peachfork_final.png" alt="Final module" style={{ width: '100%' }} />
                 <figcaption>
-                    <em>Figure 11: The final module with connections between the interface board (bottom) and the ehx board (top), including the faceplate.</em>
+                    <em>Figure 12: The prototype and final module with connections between the interface board (bottom) and the ehx board (top), including the faceplate.</em>
                 </figcaption>
             </figure>
         </div>
