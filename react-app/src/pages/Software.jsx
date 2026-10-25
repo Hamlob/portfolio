@@ -1,3 +1,6 @@
+import ProjectGrid from '../components/ProjectCard'
+import { SectionPrompt } from '../components/Terminal'
+
 const projects = [
     {
         title: 'Urban Dictionary',
@@ -22,24 +25,8 @@ const projects = [
 export default function Software() {
     return (
         <section className="section">
-            <div className="section-header">
-                <h2>Software</h2>
-            </div>
-            <div className="projects-grid">
-                {projects.map((p) => (
-                    <div className="project-card" key={p.title}>
-                        {p.youtube
-                            ? <iframe src={p.youtube} title={p.title} frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen />
-                            : <img src={p.image} alt={p.title} />
-                        }
-                        <div className="project-card-body">
-                            <h3>{p.title}</h3>
-                            <p>{p.description}</p>
-                            <a href={p.link} className="btn-sm" target="_blank" rel="noreferrer">Learn More</a>
-                        </div>
-                    </div>
-                ))}
-            </div>
+            <SectionPrompt path="~/projects/software" command="ls -la" title="Software" />
+            <ProjectGrid projects={projects} />
         </section>
     )
 }

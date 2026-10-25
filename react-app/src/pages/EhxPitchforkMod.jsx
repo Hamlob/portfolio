@@ -1,7 +1,7 @@
 const EhxPitchforkMod = () => {
     return (
         <div className="ehx-pitchfork-mod">
-            <h1 style={{ textAlign: 'center', fontSize: '28pt', marginTop: '0.17in', marginBottom: '0.08in' }}>
+            <h1>
                 <b>EHX Pitchfork Eurorack Mod</b>
             </h1>
 

@@ -1,32 +1,38 @@
 import { useState } from 'react'
-import { Link, NavLink, Outlet } from 'react-router-dom'
+import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { FaInstagram, FaYoutube, FaGithub, FaSpotify, FaBars, FaTimes, FaChevronDown } from 'react-icons/fa'
 
 function Navbar() {
     const [open, setOpen] = useState(false)
     const [dropdownOpen, setDropdownOpen] = useState(false)
     const close = () => { setOpen(false); setDropdownOpen(false) }
+    const { pathname } = useLocation()
+    const path = pathname === '/' ? '~' : `~${pathname}`
 
     return (
         <nav className="navbar">
             <div className="navbar-inner">
-                <Link to="/" className="navbar-logo" onClick={close}>Hamlob</Link>
+                <Link to="/" className="navbar-logo" onClick={close}>
+                    <span className="p-user">hamlob</span><span className="p-at">@</span><span className="p-host">portfolio</span>
+                    <span className="p-sep">:</span><span className="p-path">{path}</span><span className="p-sep">$</span>
+                    <span className="cursor" />
+                </Link>
                 <button className="hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
                     {open ? <FaTimes /> : <FaBars />}
                 </button>
                 <ul className={`navbar-links${open ? ' open' : ''}`}>
-                    <li><NavLink to="/" end onClick={close}>About</NavLink></li>
+                    <li><NavLink to="/" end onClick={close}>./about</NavLink></li>
                     <li className={`nav-dropdown${dropdownOpen ? ' open' : ''}`}>
                         <button className="nav-dropdown-btn" onClick={() => setDropdownOpen(!dropdownOpen)}>
-                            Projects <FaChevronDown size={12} />
+                            ./projects <FaChevronDown size={10} />
                         </button>
                         <div className="nav-dropdown-menu">
-                            <NavLink to="/electronics" onClick={close}>Electronics</NavLink>
-                            <NavLink to="/software" onClick={close}>Software</NavLink>
-                            <NavLink to="/music" onClick={close}>Music</NavLink>
+                            <NavLink to="/electronics" onClick={close}>electronics/</NavLink>
+                            <NavLink to="/software" onClick={close}>software/</NavLink>
+                            <NavLink to="/music" onClick={close}>music/</NavLink>
                         </div>
                     </li>
-                    <li><NavLink to="/contact" onClick={close}>Contact</NavLink></li>
+                    <li><NavLink to="/contact" onClick={close}>./contact</NavLink></li>
                 </ul>
             </div>
         </nav>
@@ -42,7 +48,12 @@ function Footer() {
                 <li><a href="https://www.github.com/hamlob" target="_blank" rel="noreferrer"><FaGithub /></a></li>
                 <li><a href="https://open.spotify.com/artist/6Dj9YTAwexydw581xzsaAN" target="_blank" rel="noreferrer"><FaSpotify /></a></li>
             </ul>
-            <p>&copy; 2025 Hamlob</p>
+            <p className="statusline">
+                <span className="sl-mode">NORMAL</span>
+                <span className="sl-file">hamlob.com</span>
+                <span className="sl-fill" />
+                <span className="sl-pos">&copy; {new Date().getFullYear()} Hamlob</span>
+            </p>
         </footer>
     )
 }

@@ -1,9 +1,9 @@
+import { SectionPrompt } from '../components/Terminal'
+
 export default function Music() {
     return (
         <section className="section">
-            <div className="section-header">
-                <h2>Music</h2>
-            </div>
+            <SectionPrompt path="~/projects/music" command="mpc playlist" title="Music" />
             <div className="music-grid">
                 <div className="spotify-embed">
                     <iframe

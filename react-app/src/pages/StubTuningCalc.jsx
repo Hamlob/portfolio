@@ -81,6 +81,7 @@ export default function StubTuningCalc() {
 
     return (
         <section className="stub-section">
+            <p className="prompt-line"><span className="p-sep">$</span> ./stub-calc --shunt</p>
             <h1>Shunt Stub Tuning Calculator</h1>
             <img src="/images/stubSchem.png" alt="Stub schematic" />
 
@@ -94,20 +95,20 @@ export default function StubTuningCalc() {
                 <label htmlFor="loadReact">Xload</label>
                 <input type="number" id="loadReact" value={xl} onChange={e => setXl(e.target.value)} />
 
-                <label htmlFor="fullSol"></label>
+                <label htmlFor="fullSol">mode</label>
                 <select id="fullSol" value={fullSol} onChange={e => setFullSol(parseInt(e.target.value))}>
                     <option value={0}>Shortest Solution</option>
                     <option value={1}>Full Solution</option>
                 </select>
             </div>
 
-            <button className="btn-primary" onClick={calculate}>Calculate</button>
+            <button className="btn-primary" onClick={calculate}>$ calculate</button>
 
             {result && (
                 <div className="stub-result">
-                    <h2>Solution:</h2>
+                    <h2>// solution</h2>
                     {Object.entries(result).map(([key, value]) => (
-                        <p key={key}>{key} = {value} λ</p>
+                        <p key={key}><span className="res-key">{key}</span> = <span className="res-val">{value}</span> λ</p>
                     ))}
                 </div>
             )}
