@@ -7,3 +7,7 @@ run local server
 compile into static files into ./dist folder
 
 ```npm run build```
+
+deploy gh-pages
+
+```npm run deploy```
